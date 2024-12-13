@@ -53,3 +53,5 @@ node_modules/
 # Ignore build artifacts (optional)
 *.pyc
 __pycache__/
+
+backend/venv/
