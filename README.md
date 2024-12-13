@@ -8,4 +8,4 @@ A web app to help students summarize notes, create study plans, and get AI-power
 
 ## Tech Stack
 - Backend: Flask, OpenAI API
-- Frontend: React.js
+- Frontend: Next.js
