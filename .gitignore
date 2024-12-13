@@ -39,3 +39,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignore Python virtual environments
+venv/
+
+# Ignore Node.js dependencies
+node_modules/
+
+# Ignore IDE settings (optional)
+*.vscode/
+.idea/
+
+# Ignore build artifacts (optional)
+*.pyc
+__pycache__/
