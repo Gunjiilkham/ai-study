@@ -1,12 +1,19 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from openai import OpenAI
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
 
+api_key = os.getenv("OPENAI_API_KEY")
+if not api_key:
+    raise ValueError("API key not found in environment variables!")
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key=api_key)
 
 @app.route('/')
 def home():
