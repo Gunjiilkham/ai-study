@@ -35,7 +35,7 @@ def summarize():
         response = client.chat.completions.create(
             model="gpt-4o-mini", 
             messages=[
-                {"role": "system", "content": "Summarize the text in under 20 words, balancing key benefits and challenges."},
+                {"role": "system", "content": "Summarize the text focusing on its most critical points in an objective manner."},
                 {"role": "user", "content": f"Summarize the following text: {text}"}
             ],
             max_tokens=50,
