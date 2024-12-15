@@ -46,7 +46,7 @@ def summarize():
         return jsonify({"summary": summary})
 
     except Exception as e:
-        print(f"Error: {str(e)}")  # Debugging
+        print(f"Error: {str(e)}")  
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
 if __name__ == "__main__":
