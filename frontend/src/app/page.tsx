@@ -89,7 +89,7 @@ export default function App() {
                     <TextArea text={text} setText={setText} />
                     <button
                         onClick={handleSummarize}
-                        className="w-full py-3 bg-gradient-to-r from-teal-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-cyan-600 transition-all duration-300 shadow-md transform hover:scale-105"
+                        className="w-full py-3 bg-gradient-to-r from-gray-700 via-gray-800 to-gray-900 text-white font-semibold rounded-lg hover:from-gray-600 hover:via-gray-700 hover:to-gray-800 transition-all duration-300 shadow-lg transform hover:scale-105"
                         disabled={loading}
                     >
                         {loading ? "Summarizing..." : "Summarize"}
