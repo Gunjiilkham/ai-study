@@ -74,7 +74,7 @@ export default function App() {
     };
 
     return (
-        <div className="min-h-screen flex flex-col bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white">
+        <div className="w-full py-6 bg-gray-900 shadow-lg">
             <header className="w-full py-6 bg-gray-900 shadow-lg">
                 <div className="container mx-auto px-6">
                     <h1 className="text-4xl font-extrabold text-blue-400 text-center tracking-wider">
