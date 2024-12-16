@@ -35,11 +35,11 @@ def summarize():
         response = client.chat.completions.create(
             model="gpt-4o-mini", 
             messages=[
-                {"role": "system", "content": "Summarize the text focusing on its most critical points in an objective manner."},
+                {"role": "system", "content": "You are a summarization assistant. Summarize the input text in the fewest words possible while retaining essential meaning."},
                 {"role": "user", "content": f"Summarize the following text: {text}"}
             ],
-            max_tokens=50,
-            temperature=0.3,
+            max_tokens=30,
+            temperature=0.2,
         )
 
         summary = response.choices[0].message.content.strip()
