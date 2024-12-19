@@ -1,29 +1,181 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Source+Code+Pro:wght@300;400;600&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Root Colors */
 :root {
-  --background: #0d1117;
-  --foreground: #c9d1d9;
+  --background: #0f172a; /* Dark navy blue */
+  --foreground: #f8fafc; /* Light white */
+  --accent: #1e40af; /* Deep blue for accents */
+  --accent-hover: #2563eb; /* Slightly brighter blue */
+  --muted: #64748b; /* Muted gray for secondary text */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0a0f1d;
+    --foreground: #e2e8f0;
+    --accent: #2563eb;
+    --accent-hover: #3b82f6;
+    --muted: #94a3b8;
   }
 }
 
+/* Body Styles */
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: 'Source Code Pro', Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  background-color: var(--background);
+  font-family: 'Roboto Mono', monospace; /* Techy font */
+  line-height: 1.6;
 }
 
-h1, h2, h3 {
-  font-family: 'Orbitron', sans-serif;
-  letter-spacing: 0.05em;
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--accent);
+  font-family: 'Poppins', sans-serif; /* Clean, modern font */
+  margin: 0 0 1rem;
+}
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* Buttons */
+button {
+  font-family: 'Roboto Mono', monospace;
+  background: var(--accent);
+  color: var(--foreground);
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* Inputs */
+input, textarea {
+  background: var(--background);
+  color: var(--foreground);
+  border: 1px solid var(--muted);
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 5px var(--accent);
+}
+
+/* Containers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Footer */
+footer {
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 1rem 0;
+  background: var(--background);
+  color: var(--muted);
+}
+
+/* Navbar */
+.navbar {
+  background: var(--background);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--muted);
+}
+
+.navbar a {
+  color: var(--foreground);
+  margin: 0 1rem;
+}
+
+.navbar a:hover {
+  color: var(--accent-hover);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, var(--accent) 30%, var(--background));
+  color: var(--foreground);
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--foreground);
+}
+
+/* Cards */
+.card {
+  background: var(--background);
+  color: var(--foreground);
+  border: 1px solid var(--muted);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Utility Classes */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--muted);
 }
